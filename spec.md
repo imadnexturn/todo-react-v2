@@ -16,6 +16,12 @@ A full-stack Todo application allowing users to register, log in, and manage the
 - **As a user**, I want to edit a todo's details.
 - **As a user**, I want to delete a todo I no longer need.
 - **As a user**, I want to filter todos by status (All, Active, Completed).
+- **As a user**, I want to set an optional due date on a todo so I can track deadlines.
+- **As a user**, I want overdue todos (past due date, not completed) to be visually highlighted so I can prioritize them.
+- **As a user**, I want to assign a category (public or private) to a todo so I can control its visibility intent.
+
+### UI Requirements
+- The Dashboard header should display the text "My Todo Items".
 
 ## 3. Data Model (Conceptual)
 
@@ -30,6 +36,9 @@ A full-stack Todo application allowing users to register, log in, and manage the
 - `user_id`: UUID (Foreign Key -> user.id)
 - `title`: String
 - `description`: String (Optional)
+- `priority`: Enum ('high' | 'medium' | 'low', Default: 'medium')
+- `due_date`: String (Optional, ISO date e.g. `"2026-03-01"`)
+- `category`: Enum ('public' | 'private', Default: 'public')
 - `is_completed`: Boolean (Default: false)
 - `created_at`: DateTime
 - `updated_at`: DateTime
@@ -43,8 +52,8 @@ A full-stack Todo application allowing users to register, log in, and manage the
 
 ### Todos
 - `GET /api/todos` - List all todos for auth user
-- `POST /api/todos` - { title, description } -> Create todo
-- `PUT /api/todos/:id` - { title, description, is_completed } -> Update todo
+- `POST /api/todos` - { title, description, priority, due_date, category } -> Create todo
+- `PUT /api/todos/:id` - { title, description, priority, due_date, category, is_completed } -> Update todo
 - `DELETE /api/todos/:id` -> Delete todo
 
 ## 5. Technology Stack

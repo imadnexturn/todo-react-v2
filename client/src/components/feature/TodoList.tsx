@@ -70,19 +70,19 @@ const TodoList: React.FC = () => {
             <div className="flex gap-4 mb-6 border-b border-gray-700 pb-2">
                 <button
                     onClick={() => setFilter('all')}
-                    className={`pb-2 px-2 ${filter === 'all' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
+                    className={`pb-2 px-3 border border-gray-600 rounded-md ${filter === 'all' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
                 >
                     All
                 </button>
                 <button
                     onClick={() => setFilter('active')}
-                    className={`pb-2 px-2 ${filter === 'active' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
+                    className={`pb-2 px-3 border border-gray-600 rounded-md ${filter === 'active' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
                 >
                     Active
                 </button>
                 <button
                     onClick={() => setFilter('completed')}
-                    className={`pb-2 px-2 ${filter === 'completed' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
+                    className={`pb-2 px-3 border border-gray-600 rounded-md ${filter === 'completed' ? 'text-purple-400 border-b-2 border-purple-400' : 'text-gray-400 hover:text-white'}`}
                 >
                     Completed
                 </button>

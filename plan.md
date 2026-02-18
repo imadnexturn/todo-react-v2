@@ -41,3 +41,28 @@
 - [ ] Add loading states and error handling (toast notifications?)
 - [ ] Improve styling (transitions, responsive layout)
 - [ ] Final manual verification walk-through
+
+## Feature Updates
+- [ ] Task 1.1: TDD - Write/Update failing test for Dashboard Header text (Assign: TDD Architect)
+- [ ] Task 1.2: Implement Dashboard Header text change to pass test (Assign: TDD Implementer)
+
+### Feature: Due Date for Todo Items
+- [ ] Task B1 (TDD): Write failing test for `due_date` in `createTodo` API (Assign: TDD Architect)
+- [ ] Task B2: Add `due_date TEXT` column to SQLite schema via ALTER TABLE migration (Assign: TDD Implementer)
+- [ ] Task B3: Update `createTodo` controller to accept and store `due_date` (Assign: TDD Implementer)
+- [ ] Task B4: Update `updateTodo` controller to accept and update `due_date` (Assign: TDD Implementer)
+- [ ] Task F1 (TDD): Update `TodoItem.test.tsx` mock with `due_date`; add failing tests for display & overdue styling (Assign: TDD Architect)
+- [ ] Task F2: Add `due_date?: string` to `Todo` interface in `types/index.ts` (Assign: TDD Implementer)
+- [ ] Task F3 (TDD): Write failing tests for due date input in `AddTodo.test.tsx` (Assign: TDD Architect)
+- [ ] Task F4: Add date picker input to `AddTodo.tsx` and pass `due_date` in API call (Assign: TDD Implementer)
+- [ ] Task F5: Display `due_date` in `TodoItem.tsx` with overdue red highlight (Assign: TDD Implementer)
+
+### Feature: Category for Todo Items (public / private)
+- [ ] Task C-F1 (TDD): Update `TodoItem.test.tsx` mock with `category: 'public'`; add failing tests for category badge display (Assign: TDD Architect)
+- [ ] Task C-F2 (TDD): Update `AddTodo.test.tsx`; add failing tests for category select input (renders, updates value) (Assign: TDD Architect)
+- [ ] Task C-B1: Add `category TEXT DEFAULT 'public'` column to SQLite via `ALTER TABLE` migration in `db/index.ts` (Assign: TDD Implementer)
+- [ ] Task C-B2: Update `createTodo` controller to accept and store `category` (Assign: TDD Implementer)
+- [ ] Task C-B3: Update `updateTodo` controller to accept and update `category` (Assign: TDD Implementer)
+- [ ] Task C-T1: Add `category: 'public' | 'private'` to `Todo` interface in `types/index.ts` (Assign: TDD Implementer)
+- [ ] Task C-F3: Add category `<select>` to `AddTodo.tsx` and pass `category` in API call (Assign: TDD Implementer)
+- [ ] Task C-F4: Display category badge in `TodoItem.tsx` with `data-testid="todo-category"` (Assign: TDD Implementer)
